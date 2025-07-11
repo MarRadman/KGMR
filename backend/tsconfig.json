@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2023", // Fullt stöd för moderna JS-funktioner
+    "module": "commonjs", // Passar för Node.js & Express
+    "lib": ["es2023"], // Bibliotekstyper att inkludera
+    "allowJs": false, // Endast TypeScript-filer
+
+    /* Paths */
+    "rootDir": "./src", // Var TypeScript letar efter källkod
+    "outDir": "./src", // Utdatamapp för kompilerad JS
+    "moduleResolution": "node", // Node-modulupplösning
+    "resolveJsonModule": true, // Tillåt import av .json-filer
+
+    /* Interop & Compatibility */
+    "esModuleInterop": true, // För "import express from 'express'"
+    "allowSyntheticDefaultImports": true, // Tillåter import utan `default`
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking & Safety */
+    "strict": true, // Aktiverar alla strikta regler
+    "noImplicitAny": true, // Förbjud `any` utan typ
+    "strictNullChecks": true,
+    "noUnusedLocals": true, // Varnar för oanvända variabler
+    "noUnusedParameters": true, // Varnar för oanvända parametrar
+    "noImplicitReturns": true, // Alla funktioner måste returnera korrekt
+    "noFallthroughCasesInSwitch": true, // Säkerhet i switch-satser
+
+    /* Build Behavior */
+    "skipLibCheck": true, // Hoppa över typkontroll i .d.ts
+    "noEmitOnError": true, // Emittera inte om typfel finns
+    "incremental": true, // Snabbare kompilering
+    "tsBuildInfoFile": "./dist/.tsbuildinfo"
+  },
+  "include": ["src"], // Inkludera src/
+  "exclude": ["node_modules", "dist"] // Uteslut dessa
+}
